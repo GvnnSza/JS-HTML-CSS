@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gringo ou nao?</title>
+</head>
+<body>
+<h1>Sistema de Verificação de Nacionalidade</h1>
+Digite o País que voce nasceu: <input type="text" id="nacionalidade" placeholder="Digite o país de origem">
+<br>
+<input type="button" value="Verificar" onclick="verificarNacionalidade()">
+<div id="res"></div>
+
+<script>
+  function verificarNacionalidade() {
+    var nacionalidadeInput = document.getElementById('nacionalidade');
+    var resultado = document.getElementById('res');
+    var nacionalidade = nacionalidadeInput.value.toLowerCase();
+
+    if (nacionalidade ===  'Brasil') {
+      resultado.innerHTML = "Você é brasileiro.";
+    } else {
+      resultado.innerHTML = "Você não é brasileiro.";
+    }
+  }
+</script>
+</body>
+</html>
